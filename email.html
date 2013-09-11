@@ -1,0 +1,583 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="initial-scale=1.0">
+<!-- So that mobile webkit will display zoomed in -->
+<meta name="format-detection" content="telephone=no">
+<!-- disable auto telephone linking in iOS -->
+
+<title>Responsive Email Layout</title>
+<style type="text/css">
+/* Resets: see reset.css for details */
+.ReadMsgBody {
+	width: 100%;
+	background-color: #E6F0FA;
+}
+.ExternalClass {
+	width: 100%;
+	background-color: #E6F0FA;
+}
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+	line-height: 100%;
+}
+body {
+	-webkit-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+table {
+	border-spacing: 0;
+}
+table td {
+	border-collapse: collapse;
+	mso-table-lspace: 0pt;
+	mso-table-rspace: 0pt;
+}
+.yshortcuts a {
+	border-bottom: none !important;
+}
+
+/* Constrain email width for small screens */
+@media screen and (max-width: 600px) {
+table[class="container"] {
+	width: 95% !important;
+}
+}
+
+/* Give content more room on mobile */
+@media screen and (max-width: 480px) {
+td[class="container-padding"] {
+	padding-left: 12px !important;
+	padding-right: 12px !important;
+}
+}
+
+/* Styles for forcing columns to rows */
+@media only screen and (max-width : 600px) {
+/* force container columns to (horizontal) blocks */
+td[class="force-col"] {
+	display: block;
+	text-align: left;
+	width: auto!important;
+}
+td[class="align-msg"] {
+	text-align: center;
+}
+img[class="fullwidth-img"] {
+	width: 100%!important;
+}
+img[class="shadow-img"] {
+	width: 100%!important;
+	height: auto!important;
+}
+div[class="reset-leftpadding"] {
+	padding-left: 0!important;
+}
+td[class="reset-leftpadding"] {
+	padding-left: 0!important;
+}
+td[class="table-sectionheader"] {
+	border: none!important;
+	display: block;
+	text-align: left;
+	width: auto!important;
+}
+
+
+/* OFFERS TABLE LAYOUT */
+td[class="offers-table-header-force-col"] {
+	border-bottom:none!important;
+	display: block;
+	text-align: left;
+	width: auto!important;
+}
+td[class="offers-table-force-col"] {
+	display: block;
+	text-align: left;
+	width: auto!important;
+	padding:0 10px 10px!important;
+}
+
+/* TEXT WITH IMAGE LAYOUT */
+td[class="textimg-img-col"] {
+	border-bottom:none!important;
+	display: block;
+	text-align: left;
+	width: auto!important;
+	padding:10px 10px 0 !important;
+}
+td[class="textimg-text"] {
+	border-bottom:none!important;
+	display: block;
+	text-align: left;
+	width: auto!important;
+}
+
+/* 3 COL LAYOUTS */
+table[class="col-3"] {
+	border-bottom:1px solid #535353;
+	margin-bottom:12px;
+}
+table[id="last-col-3"] {
+	border-bottom:none;
+	margin-bottom:0;
+}
+img[class="col-3-img"] {
+		float: right;
+		margin-left: 6px;
+		max-width: 130px;
+}
+}
+</style>
+</head>
+
+<body bgcolor="#e6e6e6" style="margin:0; width:100% padding:0;background:#e6e6e6" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#e6e6e6" style="background:#e6e6e6;">
+  <!-- HEADER START -->
+  <tr>
+    <td><table style="border-top:3px solid #535353;background-color: #ffffff; padding:0 10px;" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+        <tr>
+          <td align="center" valign="top" bgcolor="#ffffff" style="background-color: #ffffff;"><table border="0" width="600" cellpadding="0" cellspacing="0" class="container" bgcolor="#ffffff">
+              <tr>
+                <td height="10">&nbsp;</td>
+              </tr>
+              <tr>
+                <td class="align-msg" align="right" style="font-size: 12px; color: #4D4D4D; font-family: Arial, Helvetica, verdana, sans-serif;">If you cannot read this email, please <a href="#" target="_blank" style="color: #6495cf; text-decoration: underline;">click here</a></td>
+              </tr>
+              <tr>
+                <td height="10">&nbsp;</td>
+              </tr>
+              <!-- LOGOS START -->
+              <tr>
+                <td align="left"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                      <td valign="middle" class="force-col" width="170" align="left"><a href="#" target="_blank" style="border: 0;"><img src="http://placehold.it/170x80/&text=logo" title="Logo" height="80" width="170" alt="" style="display: block; border: 0; padding:5px 0;" /></a></td>
+                    </tr>
+                    <tr>
+                      <td height="10" colspan="2">&nbsp;</td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <!-- LOGOS END -->
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <!-- HEADER END -->
+  <tr>
+    <td height="10">&nbsp;</td>
+  </tr>
+  <!-- IMAGE BANNER START -->
+  <tr>
+    <td align="center" valign="top" style="padding:0 10px;"><table border="0" width="600" cellpadding="0" cellspacing="0" class="container">
+        <tr>
+          <td><img class="fullwidth-img" src="http://placehold.it/600x200/&text=Banner Image" width="600" style="display: block; border: 0;" alt=""></td>
+        </tr>
+      </table></td>
+  </tr>
+  <!-- IMAGE BANNER END -->
+  <tr>
+    <td height="10"></td>
+  </tr>
+  <!-- CONTENT SECTION START -->
+  <tr>
+    <td align="center" valign="top" style="padding:0 10px;"><table border="0" width="600" cellpadding="0" cellspacing="0" class="container" bgcolor="#ffffff">
+        <!-- HEADING STYLES START -->
+        <tr>
+          <td align="left" style="padding:10px 10px 0;color: #535353; font-size: 30px;font-family: Arial, Helvetica, verdana, sans-serif;"><div style="padding-bottom:10px;border-bottom: #535353 2px solid;margin:0;">Main header</div></td>
+        </tr>
+        <tr>
+          <td height="15">&nbsp;</td>
+        </tr>
+        <tr>
+          <td align="left" style="padding:0 10px;color: #535353; font-size: 22px;font-family: Arial, Helvetica, verdana, sans-serif;"> Section header </td>
+        </tr>
+        <tr>
+          <td height="15">&nbsp;</td>
+        </tr>
+        <tr>
+          <td align="left" style="padding:0 10px;color: #535353; font-size: 18px;font-family: Arial, Helvetica, verdana, sans-serif;"> Sub header </td>
+        </tr>
+        <tr>
+          <td height="15">&nbsp;</td>
+        </tr>
+        <!-- HEADING STYLES END --> 
+        <!-- TEXT START -->
+        <tr>
+          <td align="left" style="padding:0 10px; color: #4D4D4D; font-size: 14px;line-height:22px;font-family: Arial, Helvetica, verdana, sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus cursus viverra ipsum, iaculis fermentum orci dapibus in. Etiam malesuada arcu dolor. Nulla et gravida eros. Donec placerat, eros quis tempor tempor, lectus est porttitor sem.</td>
+        </tr>
+        <!-- TEXT END -->
+        <tr>
+          <td height="15">&nbsp;</td>
+        </tr>
+        <!-- TEXT WITH ASIDE IMAGE START -->
+        <tr>
+          <td align="left"><table border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td class="force-col" style="padding:0 0 10px 10px;" valign="top"><img width="150" height="150" src="http://placehold.it/150x150/&text=Side Image" style="display:block;vertical-align:top;" hspace="0" vspace="0" border="0" alt="" /></td>
+                <td class="force-col" style="padding:0 10px; color: #4D4D4D; font-size: 14px;line-height:22px;font-family: Arial, Helvetica, verdana, sans-serif;" valign="top"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus cursus viverra ipsum, iaculis fermentum orci dapibus in. Etiam malesuada arcu dolor. Nulla et gravida eros. Donec placerat, eros quis tempor tempor, <a href="#" target="_blank" style="color: #6495cf;">lectus est porttitor sem</a>. <br>
+                  <br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus cursus viverra ipsum, iaculis fermentum orci dapibus in. Etiam malesuada arcu dolor. Nulla et gravida eros. Donec placerat, eros quis tempor tempor, lectus est porttitor sem. </td>
+              </tr>
+            </table></td>
+        </tr>
+        <!-- TEXT WITH ASIDE IMAGE END -->
+        <tr>
+          <td height="15">&nbsp;</td>
+        </tr>
+        <!-- BULLET POINT LIST START -->
+        <tr>
+          <td align="left" style="padding:0 10px;"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+              <tr>
+                <td valign="top" style="color: #535353; font-size: 14px; line-height: 22px; font-family: Arial, Helvetica, verdana, sans-serif; padding-right:5px">&bull;</td>
+                <td valign="top" style="color: #535353; font-size: 14px; line-height: 22px; font-family: Arial, Helvetica, verdana, sans-serif;">Lorem ipsum Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td valign="top" style="color: #535353; font-size: 14px; line-height: 22px; font-family: Arial, Helvetica, verdana, sans-serif; padding-right:5px">&bull;</td>
+                <td valign="top" style="color: #535353; font-size: 14px; line-height: 22px; font-family: Arial, Helvetica, verdana, sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+              </tr>
+              <tr>
+                <td valign="top" style="color: #535353; font-size: 14px; line-height: 22px; font-family: Arial, Helvetica, verdana, sans-serif; padding-right:5px;">&bull;</td>
+                <td valign="top" style="color: #535353; font-size: 14px; line-height: 22px; font-family: Arial, Helvetica, verdana, sans-serif;">Consectetur mit consectetur mit</td>
+              </tr>
+            </table></td>
+        </tr>
+        <!-- BULLET POINT LIST END -->
+        <tr>
+          <td height="15">&nbsp;</td>
+        </tr>
+        <!-- NUMBERED LIST START -->
+        <tr>
+          <td align="left" style="padding:0 10px;"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+              <tr>
+                <td width="19" valign="top" style="color: #535353; font-weight:bold; font-size: 14px; line-height: 22px; font-family: Arial, Helvetica, verdana, sans-serif; padding-right:0px">1.</td>
+                <td valign="top" style="color: #535353; font-size: 14px; line-height: 22px; font-family: Arial, Helvetica, verdana, sans-serif;">Lorem ipsum Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td width="19" valign="top" style="color: #535353; font-weight:bold; font-size: 14px; line-height: 22px; font-family: Arial, Helvetica, verdana, sans-serif; padding-right:0px">2.</td>
+                <td valign="top" style="color: #535353; font-size: 14px; line-height: 22px; font-family: Arial, Helvetica, verdana, sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+              </tr>
+              <tr>
+                <td width="19" valign="top" style="color: #535353; font-weight:bold; font-size: 14px; line-height: 22px; font-family: Arial, Helvetica, verdana, sans-serif; padding-right:0px;">3.</td>
+                <td valign="top" style="color: #535353; font-size: 14px; line-height: 22px; font-family: Arial, Helvetica, verdana, sans-serif;">Consectetur mit consectetur mit</td>
+              </tr>
+            </table></td>
+        </tr>
+        <!-- NUMBERED LIST END -->
+        <tr>
+          <td height="15">&nbsp;</td>
+        </tr>
+        <!-- PHONE START -->
+        <tr>
+          <td align="left" style="padding:0 10px; color: #535353; font-size: 16px;font-family: Arial, Helvetica, verdana, sans-serif;">Call us on: <strong>+44 123456789</strong></td>
+        </tr>
+        <!-- PHONE END -->
+        <tr>
+          <td height="15">&nbsp;</td>
+        </tr>
+        <!-- BUTTON STYLES START -->
+        <tr>
+          <td align="left" style="padding:0 10px;"><a href="#"><img border="0" width="100" height="40" src="http://www.cssmonkey.co.uk/email/btn.gif" alt="Find out more"></a></td>
+        </tr>
+        <!-- BUTTON STYLES END -->
+        <tr>
+          <td height="15">&nbsp;</td>
+        </tr>
+      </table></td>
+  </tr>
+  <!-- CONTENT SECTION END -->
+  <tr>
+    <td height="15">&nbsp;</td>
+  </tr>
+  <!-- CONTENT SECTION START -->
+  <tr>
+    <td align="center" valign="top" style="padding:0 10px;"><table border="0" width="600" cellpadding="0" cellspacing="0" class="container" bgcolor="#ffffff">
+        <!-- HEADING STYLES START -->
+        <tr>
+          <td align="left" style="padding:10px 10px 0;color: #535353; font-size: 30px;font-family: Arial, Helvetica, verdana, sans-serif;"><div style="padding-bottom:10px;border-bottom: #535353 2px solid;margin:0;">Main header</div></td>
+        </tr>
+        <tr>
+          <td height="15">&nbsp;</td>
+        </tr>
+        <!-- HEADING STYLES END -->
+        <!-- BANNER IMAGE START -->
+        <tr>
+          <td align="left" style="padding:0 10px;"><img class="fullwidth-img" src="http://placehold.it/580x180/&text=Banner Image" width="580" style="display: block; border: 0;" alt=""></td>
+        </tr>
+        <tr>
+          <td height="15">&nbsp;</td>
+        </tr>
+        <!-- BANNER IMAGE END -->
+        <!-- PROMO BAR START -->
+        <tr>
+          <td align="left" style="padding:0 10px;">
+          	<table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#e6e6e6" style="background:#e6e6e6; border:1px solid #cccccc;">
+            	<tr>
+              	<td align="left" style="padding:10px;color: #535353; font-size: 16px;font-family: Arial, Helvetica, verdana, sans-serif;">This is a promo bar</td>
+                <td align="right" style="padding:10px;"><a href="#"><img border="0" width="100" height="40" src="http://www.cssmonkey.co.uk/email/btn.gif" alt="Find out more"></a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="15">&nbsp;</td>
+        </tr>
+        <!-- PROMO BAR END -->
+        <!-- 3 COL PROMO START -->
+        <tr>
+          <td align="left" style="padding:0 10px;">
+          	<table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#e6e6e6" style="background:#e6e6e6; border:1px solid #cccccc;">
+            	<tr>
+              	<td align="left" valign="top" class="force-col">
+                	<table border="0" width="100%" cellpadding="0" cellspacing="0" class="col-3">
+                  	<tr>
+                    	<td align="left" class="col-3-img" style="padding:10px;color: #535353; font-size: 14px; line-height: 22px; font-family: Arial, Helvetica, verdana, sans-serif;">
+                      	<img class="col-3-img" style="padding-bottom:10px;" src="http://placehold.it/172x172/&text=Banner Image" width="172" border="0" hspace="0" vspace="0" alt="">
+                        <div style="color:#000000; margin:0; font-weight:bold;padding:0 0 10px;">Column header</div>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td align="left" valign="top" class="force-col">
+                	<table border="0" width="100%" cellpadding="0" cellspacing="0" class="col-3">
+                  	<tr>
+                    	<td align="left" class="col-3-img" style="padding:10px;color: #535353; font-size: 14px; line-height: 22px; font-family: Arial, Helvetica, verdana, sans-serif;">
+                      	<img class="col-3-img" style="padding-bottom:10px;" src="http://placehold.it/172x172/&text=Banner Image" width="172" border="0" hspace="0" vspace="0" alt="">
+                        <div style="color:#000000; font-weight:bold;margin:0;padding:0 0 10px;">Column header</div>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td align="left" valign="top" class="force-col">
+                	<table border="0" width="100%" cellpadding="0" cellspacing="0" id="last-col-3" class="col-3">
+                  	<tr>
+                    	<td align="left" class="col-3-img" style="padding:10px;color: #535353; font-size: 14px; line-height: 22px; font-family: Arial, Helvetica, verdana, sans-serif;">
+                      	<img class="col-3-img" style="padding-bottom:10px;" src="http://placehold.it/172x172/&text=Banner Image" width="172" border="0" hspace="0" vspace="0" alt="">
+                        <div style="color:#000000; font-weight:bold;margin:0;padding:0 0 10px;">Column header</div>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="15">&nbsp;</td>
+        </tr>
+        <!-- 3 COL PROMO END -->
+        <!-- OFFERS TABLE START -->
+        <tr>
+          <td align="left" style="padding:0 10px;">
+          	<table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#e6e6e6" style="background:#e6e6e6; border-top:1px solid #cccccc; border-left:1px solid #cccccc; border-right:1px solid #cccccc;">
+            	<tr>
+              	<td colspan="2" align="left" style="border-bottom:1px solid #cccccc;padding:10px;color: #535353; font-size: 18px;font-family: Arial, Helvetica, verdana, sans-serif;">Offers Table</td>
+              </tr>
+              <tr>
+              	<td valign="middle" align="left" style="border-bottom:1px solid #cccccc;" class="offers-table-header-force-col">
+                	<table border="0" width="100%" cellpadding="0" cellspacing="0">
+                  	<tr>
+                    	<td align="left" style="padding:10px;color: #535353; font-size: 16px;font-family: Arial, Helvetica, verdana, sans-serif;">Peterhead Hotel</td>
+                    	<td align="right" style="padding:10px;color: #535353; font-size: 16px;font-family: Arial, Helvetica, verdana, sans-serif; font-weight:bold">&pound;100.00 prpn</td>
+                    </tr>
+                  </table>
+                </td>
+                <td align="right" style="border-bottom:1px solid #cccccc;padding:10px;" class="offers-table-force-col"><a href="#"><img border="0" width="100" height="40" src="http://www.cssmonkey.co.uk/email/btn.gif" alt="Find out more"></a></td>
+              </tr>
+              <tr>
+              	<td valign="middle" align="left" style="border-bottom:1px solid #cccccc;" class="offers-table-header-force-col">
+                	<table border="0" width="100%" cellpadding="0" cellspacing="0">
+                  	<tr>
+                    	<td align="left" style="padding:10px;color: #535353; font-size: 16px;font-family: Arial, Helvetica, verdana, sans-serif;">Boddam Hotel</td>
+                    	<td align="right" style="padding:10px;color: #535353; font-size: 16px;font-family: Arial, Helvetica, verdana, sans-serif; font-weight:bold">&pound;100.00 prpn</td>
+                    </tr>
+                  </table>
+                </td>
+                <td align="right" style="border-bottom:1px solid #cccccc;padding:10px;" class="offers-table-force-col"><a href="#"><img border="0" width="100" height="40" src="http://www.cssmonkey.co.uk/email/btn.gif" alt="Find out more"></a></td>
+              </tr>
+              <tr>
+              	<td valign="middle" align="left" style="border-bottom:1px solid #cccccc;" class="offers-table-header-force-col">
+                	<table border="0" width="100%" cellpadding="0" cellspacing="0">
+                  	<tr>
+                    	<td align="left" style="padding:10px;color: #535353; font-size: 16px;font-family: Arial, Helvetica, verdana, sans-serif;">Fraserburgh Hotel</td>
+                    	<td align="right" style="padding:10px;color: #535353; font-size: 16px;font-family: Arial, Helvetica, verdana, sans-serif; font-weight:bold">&pound;100.00 prpn</td>
+                    </tr>
+                  </table>
+                </td>
+                <td align="right" style="border-bottom:1px solid #cccccc;padding:10px;" class="offers-table-force-col"><a href="#"><img border="0" width="100" height="40" src="http://www.cssmonkey.co.uk/email/btn.gif" alt="Find out more"></a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="15">&nbsp;</td>
+        </tr>
+        <!-- OFFERS TABLE END -->
+      </table>
+      </td>
+  </tr>
+  <!-- CONTENT SECTION END -->
+  <tr>
+    <td height="15">&nbsp;</td>
+  </tr>
+  <!-- CONTENT SECTION START -->
+  <tr>
+    <td align="center" valign="top" style="padding:0 10px;"><table border="0" width="600" cellpadding="0" cellspacing="0" class="container" bgcolor="#ffffff">
+        <!-- HEADING STYLES START -->
+        <tr>
+          <td align="left" style="padding:10px 10px 0;color: #535353; font-size: 30px;font-family: Arial, Helvetica, verdana, sans-serif;"><div style="padding-bottom:10px;border-bottom: #535353 2px solid; margin:0;">Main header</div></td>
+        </tr>
+        <tr>
+          <td height="15">&nbsp;</td>
+        </tr>
+        <!-- HEADING STYLES END -->
+        <!-- TEXT WITH IMAGE START -->
+        <tr>
+          <td align="left" style="padding:0 10px;">
+          	<table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#e6e6e6" style="background:#e6e6e6; border:1px solid #cccccc;">
+            	<tr>
+                <td align="left" valign="top">
+                	<table border="0" width="100%" cellpadding="0" cellspacing="0">
+                  	<tr>
+                    	<td align="left" valign="top" class="textimg-img-col" style="padding:10px 0 10px 10px;">
+                      	<img class="textimg-img" src="http://placehold.it/172x172/&text=Side Image" width="172" border="0" hspace="0" vspace="0" alt="">
+                      </td>
+                      <td align="left" valign="top" class="textimg-text" style="padding:10px;color: #535353; font-size: 14px; line-height: 22px; font-family: Arial, Helvetica, verdana, sans-serif;">
+                        <div style="color: #535353; font-size: 18px;font-family: Arial, Helvetica, verdana, sans-serif; margin:0; padding:0 0 10px; margin:0;padding:0 0 10px;">Header</div>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.<br>
+<br>
+<a href="#"><img border="0" width="100" height="40" src="http://www.cssmonkey.co.uk/email/btn.gif" alt="Find out more"></a>
+
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="15">&nbsp;</td>
+        </tr>
+        <!-- TEXT WITH IMAGE END -->
+      </table>
+      </td>
+  </tr>
+  <!-- CONTENT SECTION END --> 
+  <tr>
+    <td height="15">&nbsp;</td>
+  </tr>
+  <!-- CONTENT SECTION START -->
+  <tr>
+  	<td align="center" valign="top" style="padding:0 10px;">
+      <table cellpadding="0" cellspacing="0" border="0" width="600" class="container" bgcolor="#ffffff" style="background:#ffffff;">
+        <tr>
+          <td align="left" valign="top" class="textimg-img-col" style="padding:10px 0 10px 10px;">
+            <img class="textimg-img" src="http://placehold.it/172x172/&text=Side Image" width="172" border="0" hspace="0" vspace="0" alt="">
+          </td>
+          <td align="left" valign="top" class="textimg-text" style="padding:10px;color: #535353; font-size: 14px; line-height: 22px; font-family: Arial, Helvetica, verdana, sans-serif;">
+            <div style="color: #535353; font-size: 18px;font-family: Arial, Helvetica, verdana, sans-serif; margin:0; padding:0 0 10px;">Header</div>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.<br>
+<br>
+<a href="#"><img border="0" width="100" height="40" src="http://www.cssmonkey.co.uk/email/btn.gif" alt="Find out more"></a>
+
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <!-- CONTENT SECTION END -->
+  <tr>
+    <td height="15">&nbsp;</td>
+  </tr>
+  <!-- 2 COLUMN SECTION START -->
+  <tr>
+    <td align="center" valign="top" style="padding:0 10px;"><table border="0" width="600" cellpadding="0" cellspacing="0" class="container">
+        <tr>
+          <td class="force-col" valign="top" width="288"><table cellpadding="0" style="background:#ffffff;" bgcolor="#ffffff" cellspacing="0" border="0" width="100%">
+              <tr>
+                <td style="border-bottom: 1px solid #CECFD2;"><a href="#" target="_blank"><img border="0" width="288" src="http://www.placehold.it/288x94/&text=Article Image" alt="" class="fullwidth-img" style="display: block;"></a></td>
+              </tr>
+              <!-- HEADING STYLES START -->
+              <tr>
+                <td align="left" style="padding:10px;color: #535353; font-size: 18px;font-family: Arial, Helvetica, verdana, sans-serif;">Header</td>
+              </tr>
+              <!-- HEADING STYLES END --> 
+              <!-- TEXT START -->
+              <tr>
+                <td align="left" style="padding:0 10px 10px; color: #4D4D4D; font-size: 13px;line-height:18px;font-family: Arial, Helvetica, verdana, sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus cursus viverra ipsum, iaculis fermentum orci dapibus in. Etiam malesuada arcu dolor. Nulla et gravida eros. Donec placerat, eros quis tempor tempor, lectus est porttitor sem. <br>
+                  <br>
+                  Phasellus cursus viverra ipsum, iaculis fermentum orci dapibus in. Etiam malesuada arcu dolor </td>
+              </tr>
+              <!-- TEXT END -->
+              <tr>
+                <td align="left" style="padding:0 10px 10px;"><a href="#" target="_blank" style="font-size: 14px; font-family: Arial, Helvetica, verdana, sans-serif; color: #6495cf; text-decoration: underline;">Read Article</a></td>
+              </tr>
+            </table>
+          </td>
+          <td class="force-col" style="padding:8px 5px;" valign="top"></td>
+          <td class="force-col" valign="top" width="288"><table cellpadding="0" cellspacing="0" style="background:#ffffff;" border="0" width="100%" bgcolor="#ffffff">
+              <!-- HEADING STYLES START -->
+              <tr>
+                <td align="left" style="padding:10px;color: #535353; font-size: 18px;font-family: Arial, Helvetica, verdana, sans-serif;"><a href="#" target="_blank" style="text-decoration:none; color: #535353; font-size: 18px;font-family: Arial, Helvetica, verdana, sans-serif;">Your child and diabetes: positive steps to help manage the condition</a></td>
+              </tr>
+              <!-- HEADING STYLES END --> 
+              <!-- TEXT START -->
+              <tr>
+                <td align="left" style="padding:0 10px 10px; color: #4D4D4D; font-size: 13px;line-height:18px;font-family: Arial, Helvetica, verdana, sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus cursus viverra ipsum, iaculis fermentum orci dapibus in. Etiam malesuada arcu dolor. Nulla et gravida eros. Donec placerat, eros quis tempor tempor, lectus est porttitor sem. <br>
+                  <br>
+                  Phasellus cursus viverra ipsum, iaculis fermentum orci dapibus in. Etiam malesuada arcu dolor </td>
+              </tr>
+              <!-- TEXT END -->
+              <tr>
+                <td align="left" style="padding:0 10px 10px;"><a href="#" target="_blank" style="font-size: 13px; font-family: Arial, Helvetica, verdana, sans-serif; color: #6495cf;text-decoration: underline;">Read Article</a></td>
+              </tr>
+            </table>
+            </td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" style="padding:20px 10px;"><table border="0" width="600" cellpadding="0" cellspacing="0" class="container">
+        <tr>
+          <td align="left" style="color: #000000; font-size: 14px; font-weight: bold; line-height: 22px;font-family: Arial, Helvetica, verdana, sans-serif;">Lines are open 08h00 - 18h00 GMT Monday to Friday. Calls may be recorded for training, monitoring and as a record of our conversation.</td>
+        </tr>
+        <tr>
+          <td height="10"></td>
+        </tr>
+      </table></td>
+  </tr>
+  <!-- DISCLAIMER END --> 
+  <!-- FOOTER START -->
+  <tr>
+    <td><table bgcolor="#999999" style="border-top:1px solid #ffffff; background:#999999;" cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+          <td align="center" style="padding:10px;"><table cellpadding="0" cellspacing="0" border="0" width="600" class="container">
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="left" style="color: #ffffff; line-height:22px; font-size: 14px; font-family: Arial, Helvetica, verdana, sans-serif;">Company registered name. <br>
+Company registration number. <br>
+Place of registration. <br>
+Registered office address</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <!-- FOOTER END -->
+</table>
+</body>
+</html>
